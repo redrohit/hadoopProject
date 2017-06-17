@@ -8,7 +8,7 @@ ip_list=[]
 ipaddr="192.168.10."
 
 #range of ip address
-for  i  in   range(121)[-21:]  :
+for  i  in   range(255)[-155:]  :
 	check=commands.getstatusoutput('ping  -c 1 192.168.10.'+str(i))
 	if  check[0] ==  0  :
 		ip_list.append(ipaddr+str(i))
@@ -17,7 +17,7 @@ for  i  in   range(121)[-21:]  :
 
 #print the ip which is reachable
 print   "scanned  IP    "
-time.sleep(2)
+time.sleep(3)
 print   ip_list
 
 #  checking  cpu core
@@ -30,14 +30,14 @@ mem_check="cat /proc/meminfo | grep -i MemTotal:"
 #  extract information which ip is scanned 
 for i   in  ip_list:
 	#cpu check without entering password of each scanned ip
-	ignore_exit_value, cpu_core=commands.getstatusoutput('sshpass -p "redhat" ssh root@'+i+" "+cpu_check)
+	ignore_exit_value, cpu_core=commands.getstatusoutput('sshpass -p "redhat" ssh -o StrictHostKeyChecking=no root@'+i+" "+cpu_check)
 	cpu=cpu_core.strip()
 	
 	#memory check without entering of each scanned ip
 	ignore1,memory_value=commands.getstatusoutput('sshpass -p "redhat" ssh root@'+i+" "+mem_check)
 	
 	mem=memory_value.replace(" ","")
-	cpu_ip.append("[   IP="+i+"   ,   "+"CPU="+cpu+"   ,   "+"Memory="+mem+"]   ")
+	cpu_ip.append("[   IP="+i+"   ,   "+"CPU="+cpu+"   ,   "+"Memory="+mem+"   ]")
 
 #Assigning each cpu information
 system_information=cpu_ip[:]
