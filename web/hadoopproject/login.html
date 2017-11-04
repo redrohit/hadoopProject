@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Own SuperComputer</title>
+<style>
+
+marquee{
+color:CYAN;
+margin:30px;
+font-size:200%;
+}
+
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid CYAN;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    color:CYAN;
+    background-color: GREEN;
+}
+
+.img {
+    text-align: center;
+    margin: 12px 0 12px 0;
+}
+
+img.pic {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+</style>
+</head>
+<body bgcolor=BLUE>
+
+<marquee>Authentication is required to enter in World Of Data</marquee>
+
+<form action="http://192.168.122.1/cgi-bin/hadoopproject/login.py">
+<fieldset class="fieldset">
+<legend style="color:CYAN;">Authentication Required</legend>
+  <div class="img">
+    <img src="rohit.jpg" class="pic">
+  </div>
+
+  <div class="container">
+    <label style="color:CYAN;"><b>Username</b></label>
+    <input type="text" class="input" placeholder="Enter Username" name="uname" required>
+
+    <label style="color:CYAN;"><b>Password</b></label>
+    <input type="password" class="input" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+  </div>
+</fieldset>
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+body
+{
+background-color:cyan;
+}
+
+fieldset
+{
+text-align:center;
+background-color:red;
+padding:50px;
+width:30%;
+height:40%;
+margin:0% 30% 30% 30%;
+}
+

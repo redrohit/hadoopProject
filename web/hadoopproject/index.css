@@ -1,0 +1,83 @@
+html, body{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+}
+.intro{
+	height:400px;
+	width:100%;
+	margin:auto;
+	background: url(hadoop.png);
+	display: table;
+	top: 0;
+	background-size: cover;
+}
+.intro .inner{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
+}
+.content{
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.content marquee{
+	font-family: 'Raleway', sans-serif;
+	color: CYAN;
+	text-shadow: 0px 0px 300px #fff;
+	font-size: 400%;
+	margin:50px;
+}
+.btn{
+	border-radius: 9px;
+	font-family: 'Oswald', sans-serif;
+	color: CYAN;
+	font-size: 135%;
+	padding: 10px 20px;
+	border: solid CYAN 3px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color:GREEN;
+}
+.btn:hover{
+	color: #fff;
+	border: solid #fff 3px;
+}
+p{
+	font-size: 150%;
+	line-height: 200%;
+	text-align: justify;
+	margin: 2%;
+	font-family: sans-serif;
+	color:WHITE;
+}
+
+@media screen and (max-width: 768px){
+	.content marquee{
+		font-size: 250%;
+	}
+	.btn{
+		font-size: 110%;
+		padding: 7px 15px;
+	}
+	p{
+		font-size:100%;
+		line-height: 160%;
+	}
+}
+.heading{
+	text-align: center;
+	color:BLUE;
+	background-color:CYAN;
+	width:40%;
+	height:40px;
+	padding:20px;
+	margin-top: 0px;
+	margin-left:30%;
+}
+.lower{
+background-color:BLACK;
+}
